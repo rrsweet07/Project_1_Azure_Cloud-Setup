@@ -57,7 +57,7 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly Available, in addition to restricting External access to the network.
--  What aspect of security do load balancers protect? What is the advantage of a jump box?_
+-  What aspect of security do load balancers protect? What is the advantage of a jump box?
 
 Load balancers add additionl layer of security to the webservers by routing traffic to so that no one server can become overwhelmed with traffic 
 helping to avoid DDoS attacks.  
@@ -87,7 +87,7 @@ Only the Jump Box machine can accept connections from the Internet. Access to th
 - 65.128.50.54
 
 Machines within the network can only be accessed by SSH.
-- Which machine did you allow to access your ELK VM? What was its IP address?_
+- Which machine did you allow to access your ELK VM? What was its IP address?
 The Jump Box has access to the ELK VM it's IP is 10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
