@@ -11,8 +11,8 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 (Resources\Ansible\Filebeat-playbook.yml)
 
----
-- name: Installing and Launch Filebeat
+
+  name: Installing and Launch Filebeat
   hosts: webservers
   become: yes
   tasks:
@@ -44,7 +44,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -77,7 +77,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web-01   |Web Server| 10.0.0.5   |   RedTeam NSG  |  RedTeam Vnet   |       Linux        |
 | Web-02   |Web Server| 10.0.0.6   |   RedTeam NSG  |  RedTeam Vnet   |       Linux        |  
 | Web-03   |Web Server| 10.0.0.7   |   RedTeam NSG  |  RedTeam Vnet   |       Linux        |
-| ELK	   |Log Server| 10.1.0.4   |   RedTeam NSG  |  RedTeam Vnet   |       Linux        | 
+| ELK	     |Log Server| 10.1.0.4   |   RedTeam NSG  |  RedTeam Vnet   |       Linux        | 
 
 ### Access Policies
 
@@ -142,7 +142,7 @@ Answer the following questions to fill in the blanks:_
 - _Which file do you update to make Ansible run the playbook on a specific machine?  How do I specify which machine to install the ELK server on versus which to install Filebeat on? you will update the hosts file to include [Elk] and include the selserver IP, in this case 10.1.0.4.   at this point you will then configure your install-ELK.yml file to install on hosts:ELK
 - _Which URL do you navigate to in order to check that the ELK server is running? Public IP add of your Elk server -  http://52.165.174.249:5601/app/kibana#/home
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
 We did not download the playbook we created a new document  nano /etc/ansible/install-ELK.yml
 nano /etc/ansible/hosts
